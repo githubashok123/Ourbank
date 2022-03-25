@@ -1,0 +1,53 @@
+<html>
+	<head>
+	<style>
+		.about-section {
+		  padding: 30px;
+		  text-align: center;
+		  background-color: #474e5d;
+		  color: white;
+		}
+	</style>
+	<script>
+		function interest(type)
+			{
+				if(type=="home")
+					document.f1.rate.value = 7
+				else if(type=="car")
+					document.f1.rate.value = 9;
+				else if(type=="personal")
+					document.f1.rate.value = 12;
+				else
+					document.f1.rate.value = "Please select Loan type";
+					
+			}
+	</script>
+	</head>
+	<body>
+	
+		<div class="about-section">
+		<a href="index.html"><img src="logo.jpg" align="left" width="80" height="80"></a>
+			<h1>Know your EMI... </h1>
+		</div>
+		<hr>
+		<fieldset align="center">
+		<legend>Enter your details</legend>
+		<form name="f1">
+			<h3>
+			Applicant name : <input type="text" name="name" maxLength=20 minLength=3 required><br>
+			Amount : <input type="number" name="amount" min=10000 max=100000000><br>
+			Type : <select name="type" onChange="interest(type.value)">
+						<option value="empty">Select</option>
+						<option value="home">Home</option>
+						<option value="car">Car</option>
+						<option value="personal">Personal</option>
+					</select> <br>
+			Interest : <input type="text" name="rate" id="interest" disabled><br>
+			Duration : <input type="number" name="duration" min=1 max=25><br>
+			EMI per Month : <input type="number" name="emi" id="interest" disabled><br>
+			<input type="button" value="EXIT">	
+			</h3>
+		</form>
+		</fieldset><br>
+	</body>
+</html>

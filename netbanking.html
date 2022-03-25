@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Netbanking</title>
+		<meta charset="UTF-8">
+		<style>
+		
+		<style>
+		body {
+		  font-family: Arial, Helvetica, sans-serif;
+		  margin: 0;
+		}
+
+		html {
+		  box-sizing: border-box;
+		}
+
+		*, *:before, *:after {
+		  box-sizing: inherit;
+		}
+
+		.column {
+		  float: left;
+		  width: 33.3%;
+		  margin-bottom: 16px;
+		  padding: 0 8px;
+		}
+
+		.card {
+		  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+		  margin: 8px;
+		}
+
+		.about-section {
+		  padding: 30px;
+		  text-align: center;
+		  background-color: #474e5d;
+		  color: white;
+		}
+
+		.container {
+		  padding: 0 16px;
+		}
+
+		.container::after, .row::after {
+		  content: "";
+		  clear: both;
+		  display: table;
+		}
+
+
+		.button {
+		  border: none;
+		  outline: 0;
+		  display: inline-block;
+		  padding: 8px;
+		  color: white;
+		  background-color: #000;
+		  text-align: center;
+		  cursor: pointer;
+		  width: 100%;
+		}
+
+		.button:hover {
+		  background-color: #555;
+		}
+
+		@media screen and (max-width: 650px) {
+		  .column {
+			width: 100%;
+			display: block;
+		  }
+		}
+		h1 {
+		  padding: 18px;
+		  text-align: center;
+		  background-color: #474e5d;
+		  color: white;
+		}
+		h3 {
+		  left-padding: 18px;
+		  text-align: left;
+		  color: black;
+		}
+		a:link {
+			color:red;
+		}
+		a:visited {
+			color:green;
+		}
+		a:hover {
+			color:blue;
+		}
+		.footer {
+		   position: fixed;
+		   left: 0;
+		   bottom: 0;
+		   width: 100%;
+		   background-color: #474e5d;
+		   color: white;
+		   text-align: center;
+		   padding: 8px;
+		}
+	</style>
+	</head>
+	<body>
+	
+		<div class="about-section">
+			<a href="index.html"><img src="logo.jpg" align="left" width="80" height="80"></a>
+			<h1>Login to Netbanking </h1>
+		</div>
+
+		<hr>
+		<form>
+			<h3>
+				Username : <input type="text" maxLength=12 minLength=9 placeholder="Enter your username" name="t1"><br>
+				Password : <input type="password" maxLength=30 minLength=8 placeholder="Enter your password" name="t2"><br>
+				<br>	
+				<input type="submit" value="LOGIN">
+				<br>
+				<br>
+				First time user <a href="Register.html">Register now</a>
+			</h3>
+		</form>
+		<hr>
+	
+	<div class="footer">
+	  www.ourbank.com
+	</div>
+
+	</body>
+</html>
