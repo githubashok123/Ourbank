@@ -9,6 +9,21 @@
 		}
 	</style>
 	<script>
+		function setRate() {
+			document.f1.rate.value = document.f1.type.value 
+		}
+
+		function calculate(){
+			var amt=Number(document.f1.amount.value);
+			var interest=Number(document.f1.rate.value);
+			var dur=Number(document.f1.duration.value);
+			interest=amt/interest;
+			dur=dur*12;
+			amt=amt+interest;
+			amt=amt/dur;
+			alert("Total EMI is " +"Rs " +amt);
+		}	
+		
 		function interest(type)
 			{
 				if(type=="home")
@@ -18,7 +33,7 @@
 				else if(type=="personal")
 					document.f1.rate.value = 12;
 				else
-					document.f1.rate.value = "Please select Loan type";
+					document.f1.rate.value = "Select";
 					
 			}
 	</script>
@@ -26,7 +41,7 @@
 	<body>
 	
 		<div class="about-section">
-		<a href="index.html"><img src="logo.jpg" align="left" width="80" height="80"></a>
+		<a href="home.html"><img src="logo.jpg" align="left" width="80" height="80"></a>
 			<h1>Know your EMI... </h1>
 		</div>
 		<hr>
@@ -34,18 +49,15 @@
 		<legend>Enter your details</legend>
 		<form name="f1">
 			<h3>
-			Applicant name : <input type="text" name="name" maxLength=20 minLength=3 required><br>
-			Amount : <input type="number" name="amount" min=10000 max=100000000><br>
-			Type : <select name="type" onChange="interest(type.value)">
-						<option value="empty">Select</option>
-						<option value="home">Home</option>
-						<option value="car">Car</option>
-						<option value="personal">Personal</option>
-					</select> <br>
-			Interest : <input type="text" name="rate" id="interest" disabled><br>
-			Duration : <input type="number" name="duration" min=1 max=25><br>
-			EMI per Month : <input type="number" name="emi" id="interest" disabled><br>
-			<input type="button" value="EXIT">	
+			Applicant name :&nbsp <input type="text" name="name" maxLength=20 minLength=3 required><br>
+			Amount : <input type="number" name="amount" min=50000 max=10000000><br>
+			Type : <input type="radio" name="type" value="7"  onClick="setRate()" /> Home      
+				   <input type="radio" name="type" value="9"  onClick="setRate()" /> Car
+				   <input type="radio" name="type" value="12" onClick="setRate()" /> Personal<br>
+			Rate : <input type="text"  name="rate" value="Choose type from above" disabled /><br>
+			Duration : <input type="number" name="duration" min="1" max="25"><br>
+			<input type="button" onClick="calculate()" value="Calculate EMI">
+			<input type="reset" value="Reset">
 			</h3>
 		</form>
 		</fieldset><br>
